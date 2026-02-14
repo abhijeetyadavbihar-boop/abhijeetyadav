@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fake Result Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    input {
+      padding: 10px;
+      width: 80%;
+      margin-bottom: 15px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    #result img {
+      margin-top: 20px;
+      max-width: 100%;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>B.TECH 1st Semester Examination, 2026</h2>
+    <p>Enter your Registration Number:</p>
+    <input type="text" id="regNum" placeholder="Registration Number">
+    <br>
+    <button onclick="showResult()">Show Result</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const memes = [
+      {url:"https://i.imgflip.com/30zz5g.jpg", msg:"आपका रिज़ल्ट skeleton के साथ इंतज़ार कर रहा है 💀"},
+      {url:"https://i.imgflip.com/1bij.jpg", msg:"रिज़ल्ट देखने आए थे, लेकिन ध्यान girlfriend पर है 😅"},
+      {url:"https://i.imgflip.com/26am.jpg", msg:"आपका SGPA = 0, लेकिन Success Kid कहता है: 'फिर भी पास हो जाओगे!' 💪"},
+      {url:"https://i.imgflip.com/4t0m5.jpg", msg:"University server: 'Surprised Pikachu face' 😲"},
+      {url:"https://i.imgflip.com/2fm6x.jpg", msg:"Examiner ने आपकी कॉपी देखकर कहा: 'ये तो भगवान ही बचा सकता है!' 🙏"},
+      {url:"https://i.imgflip.com/1otk96.jpg", msg:"Internal marks नहीं मिले, लेकिन चाय पिलाई जाएगी ☕"},
+      {url:"https://i.imgflip.com/3vzej.jpg", msg:"Result hold पर है, क्योंकि आप बहुत cool हैं 😎"},
+      {url:"https://i.imgflip.com/1ur9b0.jpg", msg:"Practical marks examiner ने अपने mood के हिसाब से दिए 🎭"},
+      {url:"https://i.imgflip.com/2hgfw.jpg", msg:"Server down है... लेकिन memes हमेशा up रहते हैं 😂"},
+      {url:"https://i.imgflip.com/1g8my4.jpg", msg:"Result देखने की कोशिश = 'Expectation vs Reality' 🤯"},
+      {url:"https://i.imgflip.com/1ihzfe.jpg", msg:"आपका रिज़ल्ट इतना secret है कि CIA भी नहीं देख सकती 🕵️‍♂️"},
+      {url:"https://i.imgflip.com/1jwhww.jpg", msg:"University बोली: 'Result बाद में देंगे, पहले meme enjoy करो!' 🎉"}
+    ];
+
+    function showResult() {
+      const randomMeme = memes[Math.floor(Math.random() * memes.length)];
+      document.getElementById("result").innerHTML = 
+        `<p>${randomMeme.msg}</p>
+         <img src="${randomMeme.url}" alt="Funny Meme">`;
+    }
+
+    // Auto-refresh every 5 seconds
+    setInterval(showResult, 5000);
+  </script>
+</body>
+</html>abhijeet yadav
